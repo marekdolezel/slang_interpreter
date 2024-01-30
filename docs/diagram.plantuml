@@ -1,0 +1,12 @@
+@startuml FileManager UML
+
+class FileManager {
+    - openFiles: std::unordered_map<std::string, std::string>
+
+    + FileManager()
+    + FileManager(const std::string& filename)
+    + contents(const std::string& filename): std::optional<std::reference_wrapper<const std::string>>
+    - loadFile(const std::string& filename): bool
+}
+
+@enduml
